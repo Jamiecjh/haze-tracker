@@ -4,8 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello, World</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+           align-items: center; justify-content: center; background: #eaf6ff;
+           font-family: system-ui, sans-serif; }
+    h1 { color: #2d5a3d; }
+    svg { width: 260px; height: auto; }
+  </style>
 </head>
 <body>
   <h1>Hello, World</h1>
+  <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" aria-label="A pink flower">
+    <!-- stem -->
+    <path d="M100 130 C95 190 105 240 100 295" stroke="#3b8f4f" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <!-- leaves -->
+    <path d="M100 230 C60 215 45 235 40 250 C70 258 92 250 100 230Z" fill="#4fae62"/>
+    <path d="M101 200 C140 182 158 200 162 216 C132 224 108 220 101 200Z" fill="#4fae62"/>
+    <!-- petals -->
+    <g transform="translate(100 90)" fill="#ff8fb8" stroke="#e5659a" stroke-width="1.5">
+      <ellipse cx="0" cy="-38" rx="20" ry="34"/>
+      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(300)"/>
+    </g>
+    <!-- center -->
+    <circle cx="100" cy="90" r="18" fill="#ffd54a" stroke="#e0a800" stroke-width="2"/>
+  </svg>
 </body>
 </html>
