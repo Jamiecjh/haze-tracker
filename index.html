@@ -8,29 +8,113 @@
     body { margin: 0; min-height: 100vh; display: flex; flex-direction: column;
            align-items: center; justify-content: center; background: #eaf6ff;
            font-family: system-ui, sans-serif; }
-    h1 { color: #2d5a3d; }
-    svg { width: 260px; height: auto; }
+    h1 { color: #2d5a3d; margin: 16px 0 8px; }
+    svg { width: min(92vw, 800px); height: auto; border-radius: 12px; }
   </style>
 </head>
 <body>
   <h1>Hello, World</h1>
-  <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" aria-label="A pink flower">
-    <!-- stem -->
-    <path d="M100 130 C95 190 105 240 100 295" stroke="#3b8f4f" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <!-- leaves -->
-    <path d="M100 230 C60 215 45 235 40 250 C70 258 92 250 100 230Z" fill="#4fae62"/>
-    <path d="M101 200 C140 182 158 200 162 216 C132 224 108 220 101 200Z" fill="#4fae62"/>
-    <!-- petals -->
-    <g transform="translate(100 90)" fill="#ff8fb8" stroke="#e5659a" stroke-width="1.5">
-      <ellipse cx="0" cy="-38" rx="20" ry="34"/>
-      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(60)"/>
-      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(120)"/>
-      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(180)"/>
-      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(240)"/>
-      <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(300)"/>
+  <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-label="A meadow with a river, trees, a flower and a fawn">
+    <!-- sky -->
+    <rect width="800" height="500" fill="#bfe6ff"/>
+    <circle cx="690" cy="70" r="36" fill="#fff3a8"/>
+    <g fill="#fff" opacity="0.9">
+      <ellipse cx="160" cy="70" rx="50" ry="18"/><ellipse cx="195" cy="58" rx="36" ry="16"/>
+      <ellipse cx="470" cy="100" rx="44" ry="15"/><ellipse cx="500" cy="90" rx="30" ry="13"/>
     </g>
-    <!-- center -->
-    <circle cx="100" cy="90" r="18" fill="#ffd54a" stroke="#e0a800" stroke-width="2"/>
+    <!-- distant hills -->
+    <path d="M0 260 C120 190 220 230 330 240 C450 180 600 210 800 250 L800 500 L0 500Z" fill="#8fcf8a"/>
+    <!-- meadow -->
+    <path d="M0 290 C200 262 600 262 800 290 L800 500 L0 500Z" fill="#6fbf6a"/>
+
+    <!-- river -->
+    <path d="M385 268 C400 268 420 268 432 268 C470 320 520 380 600 500 L190 500 C260 410 330 340 385 268Z" fill="#5db6e8"/>
+    <path d="M395 290 C380 330 330 380 270 450 M415 300 C420 350 450 400 480 450" stroke="#bfe9ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M300 440 q10 -6 20 0 M440 400 q10 -6 20 0 M360 360 q8 -5 16 0" stroke="#e8f7ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- tree: left, large -->
+    <g>
+      <rect x="86" y="230" width="22" height="100" rx="4" fill="#7a5230"/>
+      <circle cx="97" cy="205" r="52" fill="#2f8a4a"/>
+      <circle cx="65" cy="230" r="36" fill="#3a9d58"/>
+      <circle cx="130" cy="228" r="38" fill="#3a9d58"/>
+    </g>
+    <!-- tree: left, small -->
+    <g>
+      <rect x="200" y="262" width="12" height="52" rx="3" fill="#7a5230"/>
+      <circle cx="206" cy="248" r="30" fill="#3a9d58"/>
+      <circle cx="188" cy="262" r="20" fill="#2f8a4a"/>
+    </g>
+    <!-- pine: right -->
+    <g>
+      <rect x="682" y="270" width="14" height="70" rx="3" fill="#7a5230"/>
+      <polygon points="689,150 735,225 643,225" fill="#2a7a45"/>
+      <polygon points="689,185 745,265 633,265" fill="#2f8a4a"/>
+      <polygon points="689,225 755,305 623,305" fill="#368f50"/>
+    </g>
+    <!-- tree: right, far -->
+    <g>
+      <rect x="578" y="258" width="10" height="42" rx="3" fill="#7a5230"/>
+      <circle cx="583" cy="246" r="24" fill="#3a9d58"/>
+    </g>
+
+    <!-- fawn (original generic design) -->
+    <g transform="translate(540 392)">
+      <!-- far legs -->
+      <g stroke="#946027" stroke-width="7" stroke-linecap="round">
+        <line x1="-28" y1="14" x2="-30" y2="58"/>
+        <line x1="26" y1="14" x2="28" y2="58"/>
+      </g>
+      <!-- tail -->
+      <ellipse cx="-47" cy="-8" rx="7" ry="10" fill="#fff" transform="rotate(-20 -47 -8)"/>
+      <!-- body -->
+      <ellipse cx="0" cy="0" rx="48" ry="25" fill="#b5733a"/>
+      <!-- spots -->
+      <g fill="#fff3dc">
+        <circle cx="-22" cy="-10" r="4"/><circle cx="-6" cy="-15" r="4"/>
+        <circle cx="12" cy="-12" r="4"/><circle cx="-14" cy="4" r="3.5"/>
+        <circle cx="4" cy="2" r="3.5"/><circle cx="22" cy="-2" r="3.5"/>
+        <circle cx="-30" cy="2" r="3"/>
+      </g>
+      <!-- near legs -->
+      <g stroke="#b5733a" stroke-width="8" stroke-linecap="round">
+        <line x1="-18" y1="16" x2="-20" y2="60"/>
+        <line x1="36" y1="14" x2="38" y2="60"/>
+      </g>
+      <g fill="#4a3320">
+        <rect x="-24" y="58" width="9" height="5" rx="2"/>
+        <rect x="33" y="58" width="9" height="5" rx="2"/>
+      </g>
+      <!-- neck -->
+      <path d="M30 -14 C40 -30 48 -42 56 -52 L72 -44 C64 -30 62 -14 56 6Z" fill="#b5733a"/>
+      <!-- head -->
+      <ellipse cx="68" cy="-54" rx="19" ry="14" fill="#b5733a" transform="rotate(15 68 -54)"/>
+      <ellipse cx="84" cy="-48" rx="10" ry="8" fill="#e8c9a0" transform="rotate(15 84 -48)"/>
+      <circle cx="91" cy="-48" r="3" fill="#3a2a1a"/>
+      <!-- ears -->
+      <ellipse cx="55" cy="-72" rx="6" ry="13" fill="#b5733a" transform="rotate(-25 55 -72)"/>
+      <ellipse cx="55" cy="-72" rx="3" ry="8" fill="#f2b8a8" transform="rotate(-25 55 -72)"/>
+      <ellipse cx="72" cy="-74" rx="6" ry="13" fill="#b5733a" transform="rotate(10 72 -74)"/>
+      <!-- eye -->
+      <circle cx="74" cy="-57" r="3.5" fill="#2a1a10"/>
+      <circle cx="75" cy="-58" r="1.1" fill="#fff"/>
+    </g>
+
+    <!-- flower (foreground, left) -->
+    <g transform="translate(92 340) scale(0.55)">
+      <path d="M100 130 C95 190 105 240 100 295" stroke="#3b8f4f" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M100 230 C60 215 45 235 40 250 C70 258 92 250 100 230Z" fill="#4fae62"/>
+      <path d="M101 200 C140 182 158 200 162 216 C132 224 108 220 101 200Z" fill="#4fae62"/>
+      <g transform="translate(100 90)" fill="#ff8fb8" stroke="#e5659a" stroke-width="1.5">
+        <ellipse cx="0" cy="-38" rx="20" ry="34"/>
+        <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(60)"/>
+        <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(120)"/>
+        <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(240)"/>
+        <ellipse cx="0" cy="-38" rx="20" ry="34" transform="rotate(300)"/>
+      </g>
+      <circle cx="100" cy="90" r="18" fill="#ffd54a" stroke="#e0a800" stroke-width="2"/>
+    </g>
   </svg>
 </body>
 </html>
